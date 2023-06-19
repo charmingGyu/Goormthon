@@ -30,9 +30,10 @@ public class HelloController {
     @GetMapping("hello-string")
     @ResponseBody // 직접 입력하겠다.
     public String helloString(@RequestParam("name") String name) {
-        return "hello " + name; // "hello spring" --> 이 문자가 그대로 내려간다.
+        return /*<html>*/ "hello " + name /* + </html> */; // "hello spring" --> 이 문자가 그대로 내려간다.-->view 같은것이 없다.
     }
-    @GetMapping("hello-api")
+
+    @GetMapping("hello-api") // 문자열이 아닌 데이터를 필요로 하면 API 방식 많이 사용
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
@@ -51,4 +52,8 @@ public class HelloController {
             this.name = name;
         }
     }
-}
+
+
+
+    }
+
