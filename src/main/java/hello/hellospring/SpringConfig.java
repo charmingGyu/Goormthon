@@ -40,6 +40,11 @@ public class SpringConfig {
     }
 
 //    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    } --> TimeTraceAop 에서 @Component 사용! --> 둘중에 하나만 하면 됨! (Bean 에 등록하거나  @Component 를 사용하거나)
+
+//    @Bean
 //    public MemberRepository memberRepository() {
 ////        return new MemoryMemberRepository();
 ////        return new JdbcMemberRepository(dataSource);
